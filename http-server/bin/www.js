@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-// console.log('node 环境下运行');
+// console.log('node-fs2 环境下运行');
 
 // 命令行下解析用户执行的参数  commander
 // console.log(process.argv);
