@@ -50,8 +50,11 @@ Promise.finally = (callback) => {
 ## 问题4.
 
 async、await 优缺点
+
 优点：1、使异步操作更简洁，更像是同步代码，不像promise的then方法，虽然解决了函数的回调问题，但是链式then的方法使代码看起来很臃肿，难以维护
+
      2、可以try catch
+
 缺点：await必须后面的代码必须等前面的代码执行完成，才能执行，会导致线程堵塞
 
 
@@ -83,12 +86,15 @@ Promise 在事件循环中的执行过程是怎样的？
 ## 问题7.
 
 谈一谈 你对promise的理解
+
 1、promise的出现是为了解决函数回调的问题，相对于函数的回调，层层嵌套，promise的链式then闲的结构更加清晰，便于维护
+
 2、promise的特点，
     promise具有pending fulfilled rejected三种状态，并且
     只能是 pending => fulfilled
        或 pending => rejected
     状态一旦发生改变，就不会再次改变
+
 3、Promise的三个缺点
    无法取消Promise,一旦新建它就会立即执行，无法中途取消
    如果不设置回调函数，Promise内部抛出的错误，不会反映到外部
