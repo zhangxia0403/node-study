@@ -16,7 +16,7 @@ promise.then(() => { // 异步代码在同步之后执行
 
 
 ## 问题2.
-
+```
 Promise.resolve(1)
 .then((res) => {
   console.log(res)  // 1
@@ -25,13 +25,15 @@ Promise.resolve(1)
 .then(res => console.log(res))  // 2
 
 // 输出1,2
+```
 
 
 ## 问题3.
 
 实现 Promise.finally 并说下finally的含义
+```
+// finally 就是不管函数执行的结果，都会执行finally函数，并且把上一个函数的状态原封不动的传递给下一个then
 
-finally 就是不管函数执行的结果，都会执行finally函数，并且把上一个函数的状态原封不动的传递给下一个then
 Promise.finally = (callback) => {
     return this.then(data => {
         return new Promise.resolve(callback).then(()=> data)
@@ -42,6 +44,7 @@ Promise.finally = (callback) => {
         })
     })
 };
+```
 
 
 ## 问题4.
@@ -53,7 +56,7 @@ async、await 优缺点
 
 
 ## 问题5.
-
+```
 Promise.resolve(1)
   .then((x) => x + 1)  // 2
   .then((x) => { throw new Error('My Error') })
@@ -62,7 +65,7 @@ Promise.resolve(1)
   .then((x) => console.log(x))  // 2
   .catch(console.error)
 // 输出 2
-
+```
 
 
 ## 问题6.
