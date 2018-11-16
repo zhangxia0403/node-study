@@ -68,8 +68,11 @@ Promise.resolve(1)
 ## 问题6.
 
 Promise 在事件循环中的执行过程是怎样的？
+
 1、promis在新建时，会先执行promise中的代码，因为这是同步的
+
 2、promise.then()中的代码会等到promise中代码执行完成
+
 3、如果我们在promise的代码中添加setTimeout,让其变为异步，此时then中的函数会先执行，因为promise中的函数为宏任务，微任务会先于宏任务执行
 
 
