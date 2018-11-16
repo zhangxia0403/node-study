@@ -1,5 +1,5 @@
 ## 问题1.
-
+```
 const promise = new Promise((resolve, reject) => { // 同步代码顺序执行
   console.log(1)
   resolve()
@@ -10,6 +10,8 @@ promise.then(() => { // 异步代码在同步之后执行
 });
 
 // 输出1,2,3
+```
+
 
 
 
